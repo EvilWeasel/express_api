@@ -1,0 +1,7 @@
+POST http://localhost:14128/mitarbeiter HTTP/1.1
+Content-Type: application/json
+
+{
+    "name": "Herby Herbertson",
+    "position": "Senior Cloud Guy"
+}

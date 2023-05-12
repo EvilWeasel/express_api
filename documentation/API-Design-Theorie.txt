@@ -1,0 +1,9 @@
+GET /mitarbeiter => Gibt Liste aller Mitarbeiter zurück
+
+GET /mitarbeiter/5 => Gibt einen einzelnen Mitarbeiter mit der entsprechenden ID zurück
+
+POST /mitarbeiter => Erstellt neuen Mitarbeiter mit Infos aus Body und gibt diesen zurück
+
+PUT /mitarbeiter/5 => Verändert die Eigenschaften des angegebenen Mitarbeiters und gibt diesen zurück
+
+DELETE /mitarbeiter/5 => Entfernt Mitarbeiter aus der Liste und gibt die ID des gelöschten Mitarbeiters zurück
