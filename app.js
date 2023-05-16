@@ -28,7 +28,7 @@ app.use(express.json()); // Erlaubt das parsen von Content-Type: application/jso
 // Router implementieren
 app.use('/mitarbeiter', employeeRouter);
 app.use('/user', userRouter);
-app.use('/videogamereviews', videoGameReviewRouter);
+app.use('/videogamereview', videoGameReviewRouter);
 
 
 app.listen(port, () => {

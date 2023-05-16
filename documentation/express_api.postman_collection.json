@@ -6,111 +6,383 @@
 	},
 	"item": [
 		{
-			"name": "/mitarbeiter",
-			"request": {
-				"method": "GET",
-				"header": [],
-				"url": {
-					"raw": "http://localhost:14128/mitarbeiter",
-					"protocol": "http",
-					"host": [
-						"localhost"
-					],
-					"port": "14128",
-					"path": [
-						"mitarbeiter"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "/mitarbeiter",
-			"request": {
-				"method": "POST",
-				"header": [],
-				"body": {
-					"mode": "raw",
-					"raw": "{\r\n    \"name\": \"Tobias Wehrle\",\r\n    \"position\": \"Trainer\"\r\n}",
-					"options": {
-						"raw": {
-							"language": "json"
+			"name": "Mitarbeiter",
+			"item": [
+				{
+					"name": "/mitarbeiter",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:14128/mitarbeiter",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "14128",
+							"path": [
+								"mitarbeiter"
+							]
 						}
-					}
+					},
+					"response": []
 				},
-				"url": {
-					"raw": "http://localhost:14128/mitarbeiter",
-					"protocol": "http",
-					"host": [
-						"localhost"
-					],
-					"port": "14128",
-					"path": [
-						"mitarbeiter"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "/mitarbeiter/:id",
-			"request": {
-				"method": "DELETE",
-				"header": [],
-				"url": {
-					"raw": "http://localhost:14128/mitarbeiter/5",
-					"protocol": "http",
-					"host": [
-						"localhost"
-					],
-					"port": "14128",
-					"path": [
-						"mitarbeiter",
-						"5"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "/mitarbeiter/:id",
-			"request": {
-				"method": "PUT",
-				"header": [],
-				"body": {
-					"mode": "raw",
-					"raw": "{\r\n    \"name\": \"Susanne Schimpf\",\r\n    \"position\": \"Administration\"\r\n}",
-					"options": {
-						"raw": {
-							"language": "json"
+				{
+					"name": "/mitarbeiter",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Tobias Wehrle\",\r\n    \"position\": \"Trainer\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:14128/mitarbeiter",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "14128",
+							"path": [
+								"mitarbeiter"
+							]
 						}
-					}
+					},
+					"response": []
 				},
-				"url": {
-					"raw": "http://localhost:14128/mitarbeiter/6",
-					"protocol": "http",
-					"host": [
-						"localhost"
-					],
-					"port": "14128",
-					"path": [
-						"mitarbeiter",
-						"6"
-					]
+				{
+					"name": "/mitarbeiter/:id",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:14128/mitarbeiter/5?admin=true",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "14128",
+							"path": [
+								"mitarbeiter",
+								"5"
+							],
+							"query": [
+								{
+									"key": "admin",
+									"value": "true"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/mitarbeiter/:id",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": 42,\r\n    \"position\": true\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:14128/mitarbeiter/5",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "14128",
+							"path": [
+								"mitarbeiter",
+								"5"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/mitarbeiter/:id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:14128/mitarbeiter/5",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "14128",
+							"path": [
+								"mitarbeiter",
+								"5"
+							]
+						}
+					},
+					"response": []
 				}
-			},
-			"response": []
+			]
 		},
 		{
-			"name": "/mitarbeiter/:id",
-			"request": {
-				"method": "GET",
-				"header": [],
-				"url": {
-					"raw": ""
+			"name": "User",
+			"item": [
+				{
+					"name": "/user",
+					"request": {
+						"auth": {
+							"type": "bearer"
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:14128/user/test",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "14128",
+							"path": [
+								"user",
+								"test"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/user",
+					"request": {
+						"auth": {
+							"type": "bearer"
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:14128/user",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "14128",
+							"path": [
+								"user"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/user/:name",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:14128/user/Hans",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "14128",
+							"path": [
+								"user",
+								"Hans"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/test",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:14128/user/test",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "14128",
+							"path": [
+								"user",
+								"test"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"testuser@lutzundgrub.de\",\r\n    \"password\": \"P@ssword\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:14128/user/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "14128",
+							"path": [
+								"user",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/user/:name",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \r\n    \"name\": \"testuser\", \r\n    \"age\": 42, \r\n    \"email\": \"testuser@lutzundgrub.de\", \r\n    \"password\": \"P@ssword\", \r\n    \"favoriteDrinks\": [\r\n        \"Bier\",\r\n        \"Hefeweizen\"\r\n    ],\r\n    \"address\": {\r\n        \"street\": \"Karlsruherstr.\",\r\n        \"number\": \"101\",\r\n        \"postal\": \"74608\",\r\n        \"city\": \"Buxtehude\"\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:14128/user/testuser",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "14128",
+							"path": [
+								"user",
+								"testuser"
+							]
+						}
+					},
+					"response": []
 				}
-			},
-			"response": []
+			]
+		},
+		{
+			"name": "VideoGameReviews",
+			"item": [
+				{
+					"name": "/videogamereview",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Star Wars: Jedi Survivor\",\r\n    \"description\": \"Epic Respawn Fail\",\r\n    \"rating\": 3,\r\n    \"image\": \"https://cdn1.epicgames.com/offer/5a2ea5980ac147c195775039195a3081/EGS_STARWARSJediSurvivorStandardEdition_RespawnEntertainment_S2_1200x1600-fd090aecb23a065b29ea101939798edd\",\r\n    \"article\": \"# Star Wars: Jedi Survivor\\n\\n## Einleitung\\nObwohl der letzte Teil der Serie...\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:14128/videogamereview",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "14128",
+							"path": [
+								"videogamereview"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/videogamereview",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "DoofeBeispiele",
+			"item": [
+				{
+					"name": "New Request",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "[\r\n\r\n{\r\n    \"name\": \"Star Wars: The last Jedi\"\r\n},\r\n{\r\n    \"name\": \"Star Wars: Jedi Survivor\",\r\n    \"description\": \"bla\"\r\n}\r\n]",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:14128/videogamereviews",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "14128",
+							"path": [
+								"videogamereviews"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "New Request",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:14128/videogamereviews/search?q=buxtehude&oma=opa",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "14128",
+							"path": [
+								"videogamereviews",
+								"search"
+							],
+							"query": [
+								{
+									"key": "q",
+									"value": "buxtehude"
+								},
+								{
+									"key": "oma",
+									"value": "opa"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
 		}
 	]
 }
