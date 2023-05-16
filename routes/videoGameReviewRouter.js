@@ -42,12 +42,38 @@ router.post('/', async (req, res) => {
 
 // PUT Ändere die Review, welche über die Request.Params angegeben ist basierend
 //  auf Daten im Request.Body
+router.put('/:name', async (req, res) => {
+    try {
+        const videoGameReviewName = req.params.name;
+        if (videoGameReviewName == null) 
+            return res.status(400).send('Missing Param "name".');
+        const { name, description, rating, image, article } = req.body;
+        const videoGameReview = VideoGameReview.findOneAndUpdate({ name: videoGameReviewName}, {
+            name: name,
+            description: description,
+            rating: rating,
+            image: image,
+            article: article
+        });
+        if (videoGameReview == null) 
+            return res.status(404).send(`Review with given name "${videoGameReviewName}" does not exist...`);
+        return res.status(200).send(videoGameReview);
+    } catch {
+        return res.status(500).send("Something went wrong.");
+    }
+});
 
 // DELETE Lösche die Review, welche über die Request.Params angegeben ist
-
-
-router.get('/', (req, res) => {
-    
+router.delete('/:name', async (req, res) => {
+    try {
+        const videoGameReviewName = req.params.name;
+        const videoGameReview = await VideoGameReview.findOneAndRemove({ name: videoGameReviewName });
+        if(videoGameReview == null) 
+            return res.status(404).send(`Review with given name "${videoGameReviewName}" does not exist...`);
+        return res.status(200).send(videoGameReview);
+    } catch {
+        res.status(500).send("Something went wrong.");
+    }
 });
 
 
