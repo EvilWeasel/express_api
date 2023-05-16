@@ -22,11 +22,11 @@ __Vorab:__ Wählt ruhig eure eigenen Variablennamen. Ihr dürft gerne, wenn ihr 
 `console.log("Hello World!");`
 
 Eine *Videospielbewertung* (Datenmodel soll `VideoGameReview` heißen!) besteht mindestens aus den folgenden Feldern: 
-    Name/Bezeichnung
-    Kurzbeschreibung
-    Bewertung (1-10 Punkte)
-    Bild/Image (ein Link zu einem Bild)
-    Artikel (Eine Review in Form eines Markdown-Textes; mehr dazu später; sollte erstmal ein einfacher String sein)
+- Name/Bezeichnung
+- Kurzbeschreibung
+- Bewertung (1-10 Punkte)
+- Bild/Image (ein Link zu einem Bild)
+- Artikel (Eine Review in Form eines Markdown-Textes; mehr dazu später; sollte erstmal ein einfacher String sein)
 
  
 

@@ -5,9 +5,7 @@ const mongoose = require('mongoose');
 // Import Routers
 const employeeRouter = require('./routes/employeeRouter');
 const userRouter = require('./routes/userRouter');
-
-// Import Models
-const User = require('./models/User');
+const videoGameReviewRouter = require('./routes/videoGameReviewRouter');
 
 // Connect to Database
 mongoose.connect('mongodb://127.0.0.1:27017/testdb')
@@ -30,6 +28,7 @@ app.use(express.json()); // Erlaubt das parsen von Content-Type: application/jso
 // Router implementieren
 app.use('/mitarbeiter', employeeRouter);
 app.use('/user', userRouter);
+app.use('/videogamereviews', videoGameReviewRouter);
 
 
 app.listen(port, () => {
